@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const wssEndpoint = process.env.WSS_ENDPOINT
+const wssEndpoint = process.env.WSS_ENDPOINT || ''
 
 const App = () => {
   const [availability, setAvailability] = useState('off')
