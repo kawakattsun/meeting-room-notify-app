@@ -1,0 +1,34 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100%;
+}
+
+.meetingRoomNotification {
+  text-align: center;
+  height: 100%;
+  overflow: hidden;
+}
+.meetingRoomNotification p {
+  color: #fff;
+  font-size: 160px;
+  font-weight: bold;
+  line-height: 1;
+}
+.meetingRoomNotification-on{
+  background-color: #f44336;
+}
+.meetingRoomNotification-off{
+  background-color: #4caf50;
+}
