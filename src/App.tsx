@@ -24,7 +24,7 @@ const App = () => {
 
   return (
     <div className={`meetingRoomNotification meetingRoomNotification-${availability}`}>
-      <p>会議室 {availability === 'on' ? '使用中' : '空室'}</p>
+      <p>会議室 {availability === 'on' ? '使用中' : '空室'} Beta</p>
     </div>
   );
 }
