@@ -6,19 +6,27 @@ const App = () => {
   const [availability, setAvailability] = useState('loading')
   
   useEffect(() => {
-    const ws = new WebSocket(wssEndpoint)
-    ws.onopen = (event) => {
-      console.log('info: ws connected.')
-    }
-    ws.onmessage = (event) => {
-      const response = JSON.parse(event.data)
-      if (response.message === 'on' || response.message === 'off') {
-        setAvailability(response.message)
+    const init = () => {
+      const ws = new WebSocket(wssEndpoint)
+      ws.onopen = () => {
+        console.log('info: ws connected.')
       }
+      ws.onmessage = event => {
+        const response = JSON.parse(event.data)
+        if (response.message === 'on' || response.message === 'off') {
+          setAvailability(response.message)
+        }
+      }
+      ws.onclose = event => {
+        console.log('info: ws closed. code:' + event.code)
+        setTimeout(() => { client = init() }, 3000);
+      }
+      return ws
     }
+    let client = init()
 
     return () => {
-      ws.close()
+      client.close()
     };
   }, []);
 
