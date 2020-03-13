@@ -1,12 +1,11 @@
 html {
   height: 100%;
 }
+
 body {
   height: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -15,17 +14,26 @@ body {
   height: 100%;
 }
 
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
 .meetingRoomNotification {
   text-align: center;
   height: 100%;
+  width: 100%;
   overflow: hidden;
 }
+
 .meetingRoomNotification h1 {
   margin: 0;
   color: #fff;
   font-size: 100px;
   line-height: 1.3;
 }
+
 .meetingRoomNotification p {
   margin: 0;
   color: #fff;
@@ -33,12 +41,15 @@ body {
   font-weight: bold;
   line-height: 1.3;
 }
-.meetingRoomNotification-loading{
+
+.meetingRoomNotification-loading {
   background-color: #999;
 }
-.meetingRoomNotification-on{
+
+.meetingRoomNotification-on {
   background-color: #f44336;
 }
-.meetingRoomNotification-off{
+
+.meetingRoomNotification-off {
   background-color: #4caf50;
 }
